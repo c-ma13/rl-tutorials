@@ -4,6 +4,38 @@
 > 每日学习时间：约 2 小时（讲义 + 代码实践）
 > 预计总时长：8-10 周（约 30 课时）
 
+一个从 RL 基础理论到 LLM 对齐（RLHF/DPO/GRPO）的系统化学习仓库。每课包含讲义（`.md`）和配套练习代码（`.py`），共 30 课时，覆盖经典控制算法到前沿推理训练。
+
+## 仓库结构
+
+```
+rl-tutorials/
+├── lessons_01/          # RL 概览与 MDP
+├── lessons_02/          # Bellman 方程深入
+├── lessons_03/          # 策略迭代
+├── ...
+├── lessons_22/          # RL 工程实践
+├── lessons_23/          # 从 RL 到 LLM 对齐
+├── lessons_24/          # RLHF 详解
+├── lessons_25/          # DPO
+├── lessons_26/          # DPO 变体
+├── lessons_27/          # GRPO
+├── lessons_28/          # RL for Reasoning
+├── lessons_29/          # LLM Agent + RL
+└── lessons_30/          # 前沿综述与展望
+```
+
+每个 `lessons_XX/` 目录包含：
+- `lesson_XX_xxx.md` — 讲义
+- `lesson_XX_exercise.py` — 完整参考实现
+- `lesson_XX_exercise_practice.py` — 练习版本（TODO 待填写）
+
+## 学习流程
+
+1. 阅读讲义 `lesson_XX_xxx.md`
+2. 在 `lesson_XX_exercise_practice.py` 中独立实现所有 TODO
+3. 运行验证，对照 `lesson_XX_exercise.py` 中的参考实现
+
 ---
 
 ## 阶段一：基础理论（第 1-2 周，6 课时）
@@ -57,7 +89,7 @@
 
 ## 阶段四：RL for LLMs — RLHF 与前沿（第 8-10 周，8 课时）
 
-这是你的最终目标区域，将 RL 与大模型训练深度结合。
+将 RL 与大模型训练深度结合，覆盖 RLHF、DPO、GRPO 及推理训练前沿。
 
 | 课时 | 主题 | 核心内容 | 代码实践 | 预计时间 |
 |------|------|----------|----------|----------|
@@ -97,24 +129,7 @@
 
 ## 学习建议
 
-1. **数学推导要亲手做** — 数学基础很重要，Bellman 方程、策略梯度定理等要自己推一遍
+1. **数学推导要亲手做** — Bellman 方程、策略梯度定理等要自己推一遍，不能只看懂
 2. **代码要从零写** — 前期不要用库，理解每行代码的含义；后期可以用 SB3/TRL 加速
 3. **画学习曲线** — 每个算法都要画 reward curve，建立对收敛行为的直觉
-4. **关联已有知识** — 语音增强中的序列决策、损失函数设计思想与 RL 有很多共通之处
-5. **阶段四是重点** — 作为目标方向，阶段四的论文要精读，代码要能跑通
-
----
-
-## Exercise 代码配置规范
-
-每个 lesson 的 exercise 代码提供两个版本：
-
-1. **`lesson_XX_exercise.py`** — 完整参考实现（包含所有 TODO 的答案）
-2. **`lesson_XX_exercise_practice.py`** — 练习版本（TODO 部分只有 `pass`，需要自己实现）
-
-**推荐学习流程**：
-1. 阅读讲义 `lesson_XX_xxx.md`
-2. 在 `lesson_XX_exercise_practice.py` 中独立实现所有 TODO
-3. 运行验证，对照 `lesson_XX_exercise.py` 中的参考实现进行学习和改进
-
-这样既保留了"动手写"的学习价值，又有完整参考可以验证正确性。
+4. **阶段四是重点** — RLHF/DPO/GRPO 的论文要精读，代码要能跑通
